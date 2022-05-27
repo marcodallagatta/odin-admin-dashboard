@@ -29,7 +29,7 @@
 					<li><img src="svg/icons8-info.svg" alt=""> Privacy</li>
 				</ul>
 			</nav>
-		</div class="nav-sidebar">
+		</div>
 
 		<main>
 			<header>
@@ -152,6 +152,19 @@
 			</div>
 		</main>
 	</div>
+
+
+<script>
+	const sections = document.querySelector('.sections');
+	const navSidebar = document.querySelector('.nav-sidebar');
+	const sectionsMargin = getComputedStyle(navSidebar).rowGap.replace("px","")
+;
+	const sectionsHeight = sections.offsetHeight;
+	const meta = document.querySelector('.meta');
+	alert(sectionsHeight+sectionsMargin)
+	meta.style = `top:${parseInt(sectionsHeight)+parseInt(sectionsMargin*2)}px;`;
+	sections.style = `top:${parseInt(sectionsMargin)}px;`;
+</script>
 
 </body>
 </html>
