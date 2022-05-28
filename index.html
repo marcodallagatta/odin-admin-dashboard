@@ -135,17 +135,33 @@
 					</div>
 					<h3>Trending</h3>
 					<div class="trending">
-						<div>
-							<p>Site Maintenance</p>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus assumenda quisquam animi cupiditate!</p>
+						<div class="trending-row">
+							<img src="img/Headshot-General-1.png" alt="" class="trending-img">
+							<div>
+								<p>@tegan</p>
+								<p>World Peace Builder</p>
+							</div>
 						</div>
-						<div>
-							<p>Community Share Day</p>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus assumenda quisquam animi cupiditate atque enim quo libero modi molestias veritatis sequi eveniet minus impedit architecto esse, ducimus dicta sed tenetur!</p>
+						<div class="trending-row">
+							<img src="img/Headshot-General-1.png" alt="" class="trending-img">
+							<div>
+								<p>@morgan</p>
+								<p>Super cool project!</p>
+							</div>
 						</div>
-						<div>
-							<p>Updated Privacy Polici</p>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+						<div class="trending-row">
+							<img src="img/Headshot-General-1.png" alt="" class="trending-img">
+							<div>
+								<p>@kendall</p>
+								<p>Life changing apps</p>
+							</div>
+						</div>
+						<div class="trending-row">
+							<img src="img/Headshot-General-1.png" alt="" class="trending-img">
+							<div>
+								<p>@alex</p>
+								<p>No traffic maker</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -161,10 +177,21 @@
 ;
 	const sectionsHeight = sections.offsetHeight;
 	const meta = document.querySelector('.meta');
-	alert(sectionsHeight+sectionsMargin)
 	meta.style = `top:${parseInt(sectionsHeight)+parseInt(sectionsMargin*2)}px;`;
 	sections.style = `top:${parseInt(sectionsMargin)}px;`;
-</script>
 
+	// show width and height js
+	let divWnH = document.createElement('div');
+	divWnH.style = 'position:fixed; top:0; right:0; color:grey; background: white; font-size:12px;'
+	document.body.appendChild(divWnH);
+	function showSize() {
+		let windowWidthJS = window.innerWidth;
+		let windowHeightJS= window.innerHeight;
+		divWnH.innerText = `w:${windowWidthJS} h${windowHeightJS}`;
+	};
+	showSize();
+	window.addEventListener('resize', function() { showSize(); });
+
+</script>
 </body>
 </html>
