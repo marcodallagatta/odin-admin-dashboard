@@ -99,6 +99,18 @@ header {
 	display: grid;
 	grid-template-columns: 1fr 5fr 4fr;
 }
+@media screen and (max-width:580px) {
+	.header-bottom {
+		grid-template-columns: 1fr 5fr;
+		text-align: center;
+		row-gap: 20px;
+	}
+	.actions {
+		grid-row: 2;
+		grid-column: 1 / -1;
+	}
+}
+
 
 .header-bottom .avatar {
 	width: 80px;
